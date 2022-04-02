@@ -1,0 +1,682 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700;800;900&display=swap');
+$primary-color:#2b81e4;
+$secondary-color:#eee;
+$white:#fff;
+$grey:#555;
+$light-grey:#777;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Vollkorn', serif;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.change .navbar-wrapper {
+    bottom: 0!important;
+    opacity: 1!important;
+    transition: bottom 0.5s, opacity 0.2s 0.25s !important;
+}
+
+.change .nav-link:nth-child(1) {
+    transition: top 1s 0.4s, opacity 0.3s, color 0.3s !important;
+}
+
+.change .nav-link:nth-child(2) {
+    transition: top 1s 0.6s, opacity 0.3s, color 0.3s !important;
+}
+
+.change .nav-link:nth-child(3) {
+    transition: top 1s 0.8s, opacity 0.3s, color 0.3s !important;
+}
+
+.change .nav-link:nth-child(4) {
+    transition: top 1s 1s, opacity 0.3s, color 0.3s !important;
+}
+
+.change .nav-link:nth-child(5) {
+    transition: top 1s 1.2s, opacity 0.3s, color 0.3s !important;
+}
+
+.change .nav-link {
+    top: 0!important;
+}
+
+//HEADER
+.container {
+    .navbar-icon {
+        width: 5.5rem;
+        height: 5.5rem;
+        background-color: $white;
+        border-radius: 50%;
+        flex-direction: column;
+        cursor: pointer;
+        .line {
+            height: .2rem;
+            width: 3.5rem;
+            background-color: $light-grey;
+        }
+    }
+    .open-navbar-icon {
+        position: fixed;
+        top: 6.5rem;
+        left: 6.5rem;
+        z-index: 200;
+        .line {
+            margin: 0.3rem 0;
+        }
+    }
+    .navbar-wrapper {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, .7);
+        position: fixed;
+        left: 0;
+        bottom: -100%;
+        opacity: 0;
+        z-index: 300;
+        padding: 3.5rem 5.5rem;
+        transition: bottom 0.5s, opacity 0.2s;
+        .navbar {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(images/navbar-bg.jpg) center no-repeat;
+            background-size: cover;
+            position: relative;
+            overflow-y: hidden;
+            .nav-list {
+                height: 100%;
+                display: flex;
+                text-align: center;
+                .nav-link {
+                    font-size: 3rem;
+                    font-weight: 700;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: #000;
+                    text-transform: uppercase;
+                    width: 100%;
+                    opacity: 0.8;
+                    position: relative;
+                    top: -100%;
+                    transition: all 0.3s;
+                    &:hover {
+                        opacity: .6;
+                        color: $primary-color;
+                    }
+                }
+            }
+            .close-navbar-icon {
+                position: absolute;
+                top: 2.5rem;
+                right: 3rem;
+                z-index: 300;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i {
+                    font-size: 3rem;
+                    color: $light-grey;
+                }
+            }
+        }
+    }
+    background-color: $secondary-color;
+    margin: 3.5rem;
+    box-shadow: 0 1rem 3rem $grey;
+    overflow: hidden;
+    .header {
+        width: 100%;
+        height: calc(100vh - 7rem);
+        background: linear-gradient(rgba(18, 113, 255, .5), rgba(18, 113, 255, .3)), url('/images/header-bg.jpg') center no-repeat;
+        background-size: cover;
+        position: relative;
+        perspective: 100rem; //for air-baloon
+        .header-text {
+            text-transform: uppercase;
+            text-align: center;
+            letter-spacing: .1rem;
+            text-shadow: 0 .3rem .5rem $grey;
+            .heading {
+                font-size: 8rem;
+                color: $white;
+            }
+            .header-p {
+                font-size: 3rem;
+                font-weight: 500;
+                color: $secondary-color;
+                max-width: 70rem;
+                margin: auto;
+            }
+        }
+        .logo {
+            position: absolute;
+            top: 4rem;
+            right: 4rem;
+            h1 {
+                display: flex;
+                span {
+                    font-size: 2rem;
+                    font-weight: 900;
+                    color: $primary-color;
+                    text-transform: uppercase;
+                    background-color: $white;
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    margin: 0.5rem;
+                    border-radius: 50%;
+                    &:nth-child(1) {
+                        animation: logo-animation 5s .1s infinite;
+                    }
+                    &:nth-child(2) {
+                        animation: logo-animation 5s .2s infinite;
+                    }
+                    &:nth-child(3) {
+                        animation: logo-animation 5s .3s infinite;
+                    }
+                    &:nth-child(4) {
+                        animation: logo-animation 5s .4s infinite;
+                    }
+                    &:nth-child(5) {
+                        animation: logo-animation 5s .5s infinite;
+                    }
+                    &:nth-child(6) {
+                        animation: logo-animation 5s .6s infinite;
+                    }
+                    &:nth-child(7) {
+                        animation: logo-animation 5s .7s infinite;
+                    }
+                }
+            }
+        }
+        .header-image {
+            width: 35%;
+            animation: image-float 150s infinite;
+        }
+    }
+}
+
+@keyframes logo-animation {
+    0% {
+        transform: translateY(0);
+    }
+    10% {
+        transform: translateY(0);
+    }
+    15% {
+        transform: translateY(-100%);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes image-float {
+    0% {
+        transform: translateZ(40rem);
+        opacity: 1;
+    }
+    40% {
+        transform: translateZ(-500rem) translateX(150rem);
+        opacity: 0.8;
+    }
+    70% {
+        transform: translateZ(-1500rem) translateX(80rem);
+        opacity: 0.6;
+    }
+    80% {
+        transform: translateZ(-50rem) translateX(100rem);
+        opacity: 0.8;
+    }
+    80% {
+        transform: translateZ(40rem);
+        opacity: 1;
+    }
+}
+
+//END OF HEADER
+//POPULAR TOURS
+.popular-tours {
+    padding: 5rem 0 10rem 0;
+    .heading {
+        text-align: center;
+        font-size: 8rem;
+        margin-bottom: 8rem;
+        color: $primary-color;
+        text-shadow: 0 .1rem .2rem $primary-color;
+    }
+    .cards-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        .card {
+            width: 35rem;
+            position: relative;
+            perspective: 150rem;
+            .front-side {
+                text-align: center;
+                background-color: $white;
+                border-radius: .3rem;
+                position: relative;
+                z-index: 10;
+                opacity: 0.9rem;
+                transition: opacity .4s, transform .4s, box-shadow .4s;
+                .card-image {
+                    width: 100%;
+                    border-radius: .3rem .3rem 0 0;
+                }
+                .tour-name {
+                    font-weight: 700;
+                    font-size: 2.5rem;
+                    text-transform: uppercase;
+                    position: absolute;
+                    top: 30%;
+                    right: 1.5rem;
+                    color: $white;
+                    text-shadow: 0 0 1rem #000;
+                }
+                .card-list {
+                    width: 80%;
+                    margin: auto;
+                    padding: 2rem 0 3rem 0;
+                    .card-list-item {
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        color: $light-grey;
+                        border-bottom: .1rem solid $primary-color;
+                        margin: 2rem 0;
+                        padding-bottom: 1.5rem;
+                    }
+                }
+            }
+            .back-side {
+                position: absolute;
+                top: 0;
+                background-color: $primary-color;
+                width: 100%;
+                height: 100%;
+                border-radius: .3rem;
+                box-shadow: 0 2rem 4rem $light-grey;
+                flex-direction: column;
+                transform: translateZ(-5rem) translateX(3rem);
+                opacity: 0.5;
+                transition: opacity .4s, transform .4s, box-shadow .4s;
+                .tour-price {
+                    font-weight: 300;
+                    font-size: 5rem;
+                    color: $white;
+                    margin-bottom: 3rem;
+                }
+                .card-button {
+                    color: $primary-color;
+                    background-color: $white;
+                    border: none;
+                    font-size: 2.5rem;
+                    padding: 1rem 2rem;
+                    letter-spacing: .2rem;
+                    border-radius: 5rem;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.navigation-btn {
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    padding: .5rem;
+    background-color: rgba(255, 255, 255, .8);
+    color: $light-grey;
+    border-radius: .3rem;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    cursor: pointer;
+}
+
+.change>.front-side {
+    transform: translateZ(-5rem) translateX(3rem);
+    box-shadow: 0 2rem 4rem #777;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+.change>.back-side {
+    transform: translateZ(0) translateX(0);
+    box-shadow: 0 .5rem 2rem #aaa;
+    opacity: 1;
+}
+
+//stories
+.stories {
+    padding: 12rem 0;
+    position: relative;
+    .video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .4;
+        .bg-video {
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .stories-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .story-bg {
+            background-color: rgba(238, 238, 238, 0.8);
+            width: 70%;
+            box-shadow: 0 2rem 5rem rgba(51, 51, 51, 0.9);
+            padding: 5rem;
+            margin: 5rem;
+            transform: skewX(20deg);
+            .story {
+                transform: skewX(-20deg);
+                display: flex;
+                align-items: center;
+                .story-image {
+                    width: 20rem;
+                    height: 20rem;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-right: 5rem;
+                }
+                .story-text {
+                    letter-spacing: .1rem;
+                    .story-heading {
+                        font-size: 2.5rem;
+                        text-transform: uppercase;
+                        color: $grey;
+                        margin-bottom: 1rem;
+                    }
+                    .story-p {
+                        font-size: 1.8rem;
+                        color: $light-grey;
+                        &::first-letter {
+                            margin-left: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//ccontact
+.contact {
+    padding: 15rem 0 20rem 0;
+    text-align: center;
+    background: url('/images/contact-us-bg.png') center no-repeat;
+    background-size: cover;
+    animation: contact-bg 20s infinite;
+    .contact-heading {
+        font-size: 7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: .5rem;
+        color: $white;
+        text-shadow: 0 1rem 2rem #000;
+        margin-bottom: 8rem;
+    }
+    .contact-form {
+        width: 70rem;
+        height: 50rem;
+        background-color: rgba(255, 255, 255, .95);
+        margin: auto;
+        flex-direction: column;
+        border-radius: .5rem;
+        box-shadow: 0 1rem 3rem #000;
+        padding: 5rem;
+        .form-btn {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1.6rem;
+            letter-spacing: .1rem;
+            margin-top: 1rem;
+            background-color: $light-grey;
+            color: $white;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+            transition: background-color .4s ease-in;
+            &:hover {
+                background-color: $grey;
+            }
+        }
+        .input-group {
+            display: flex;
+            width: 100%;
+            flex-direction: column;
+            margin: 1rem 0;
+            letter-spacing: .1rem;
+            position: relative;
+            label {
+                font-size: 1.2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: .1rem;
+                color: $grey;
+                position: absolute;
+                top: 1rem;
+                left: 1rem;
+            }
+            input {
+                padding: 3rem 1rem 1rem 1rem;
+                background-color: $secondary-color;
+                border: .1rem solid $secondary-color;
+                font-size: 1.4rem;
+                border-radius: .5rem;
+                &:focus {
+                    border: .1rem solid #ccc;
+                }
+            }
+            textarea {
+                padding: 3rem 1rem 1rem 1rem;
+                background-color: $secondary-color;
+                border: .1rem solid $secondary-color;
+                font-size: 1.4rem;
+                border-radius: .5rem;
+                transition: border .5s;
+                max-height: 15rem;
+                max-width: 100%;
+                &:focus {
+                    border: .1rem solid #ccc;
+                }
+            }
+        }
+        .input-groups {
+            width: 100%;
+            display: flex;
+            gap: 2rem;
+        }
+    }
+}
+
+@keyframes contact-bg {
+    0% {
+        background-color: #3d3d3d;
+    }
+    25% {
+        background-color: #ced8e4;
+    }
+    50% {
+        background-color: #1e81f3;
+    }
+    75% {
+        background-color: #ff7842;
+    }
+    100% {
+        background-color: #3d3d3d;
+    }
+}
+
+//footer
+.footer {
+    background-color: $grey;
+    padding: 4rem 0 2rem 0;
+    .footer-list {
+        display: flex;
+        justify-content: center;
+        .footer-link {
+            font-size: 2rem;
+            color: $white;
+            margin: 0 2rem;
+            padding: .3rem 3rem;
+            letter-spacing: .3rem;
+            background-color: $grey;
+            transition: all .2s;
+            &:hover {
+                transform: rotate(-10deg);
+                box-shadow: 0 2rem 3rem #000;
+            }
+        }
+    }
+    .footer-p {
+        text-align: center;
+        font-size: 1.5rem;
+        color: $secondary-color;
+        letter-spacing: .2rem;
+        margin-top: 5rem;
+    }
+}
+
+//responsive
+@media (max-width:1200px) {
+    .cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+    .story-bg {
+        width: 85%;
+    }
+}
+
+@media (max-width:1000px) {
+    .nav-list {
+        flex-direction: column;
+        .nav-link {
+            flex-grow: 1;
+        }
+    }
+    .header {
+        .header-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+            .heading {
+                font-size: 6rem!important;
+            }
+            .header-p {
+                font-size: 2.5rem!important;
+            }
+        }
+    }
+    .popular-tours {
+        .heading {
+            font-size: 6rem;
+        }
+    }
+    .story-bg {
+        transform: skewX(0)!important;
+        .story {
+            transform: skewX(0)!important;
+            flex-direction: column;
+            align-items: center;
+            .story-image {
+                margin-bottom: 3rem !important;
+            }
+        }
+    }
+    .footer {
+        .footer-list {
+            .footer-link {
+                padding: .3rem 2rem;
+                margin: 0 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width:800px) {
+    .header-p {
+        display: none!important;
+    }
+    .popular-tours {
+        .heading {
+            font-size: 5rem;
+        }
+    }
+    .contact-form {
+        width: 90%!important;
+    }
+    .footer-list {
+        flex-direction: column;
+        align-items: center;
+        .footer-link {
+            margin: 1rem 0!important;
+        }
+    }
+}
+
+@media(max-width:650px) {
+    .container {
+        margin: 0!important;
+        .header {
+            height: 100vh;
+        }
+    }
+    .open-navbar-icon {
+        top: 2.5rem!important;
+        left: 2.5rem!important;
+    }
+    .navbar-wrapper {
+        padding: 0!important;
+    }
+    .contact-heading {
+        padding: 2rem!important;
+        height: 7rem!important;
+    }
+}
+
+@media(max-width:650px) {
+    html {
+        font-size: 40%;
+    }
+    .contact-heading {
+        font-size: 5rem!important;
+    }
+    .contact-form {
+        width: 100%!important;
+    }
+}
