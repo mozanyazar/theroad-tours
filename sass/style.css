@@ -120,7 +120,7 @@ body {
 .container .navbar-wrapper .navbar {
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.3))), url(images/navbar-bg.jpg) center no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.3))), url(./images/navbar-bg.jpg) center no-repeat;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url(images/navbar-bg.jpg) center no-repeat;
   background-size: cover;
   position: relative;
@@ -186,8 +186,8 @@ body {
 .container .header {
   width: 100%;
   height: calc(100vh - 7rem);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 113, 255, 0.5)), to(rgba(18, 113, 255, 0.3))), url("/images/header-bg.jpg") center no-repeat;
-  background: linear-gradient(rgba(18, 113, 255, 0.5), rgba(18, 113, 255, 0.3)), url("/images/header-bg.jpg") center no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(18, 113, 255, 0.5)), to(rgba(18, 113, 255, 0.3))), url("../images/header-bg.jpg") center no-repeat;
+  background: linear-gradient(rgba(18, 113, 255, 0.5), rgba(18, 113, 255, 0.3)), url("../images/header-bg.jpg") center no-repeat;
   background-size: cover;
   position: relative;
   -webkit-perspective: 100rem;
@@ -614,7 +614,7 @@ body {
 .contact {
   padding: 15rem 0 20rem 0;
   text-align: center;
-  background: url("/images/contact-us-bg.png") center no-repeat;
+  background: url("../images/contact-us-bg.png") center no-repeat;
   background-size: cover;
   -webkit-animation: contact-bg 20s infinite;
           animation: contact-bg 20s infinite;
